@@ -1,0 +1,28 @@
+body{
+    overflow-x: hidden;
+}
+.container {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 30px;
+    width: 410px;
+    height: 100vh;
+    color: white;
+    background-color: #227C90;
+    transition: transform 0.8s ease; 
+}
+
+.hidden {
+    transform: translateX(100%); 
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #ddd;
+}
+.containerbody{
+    padding: 10px 0px;
+}

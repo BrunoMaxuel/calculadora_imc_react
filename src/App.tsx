@@ -4,22 +4,31 @@ import paweredImg from './assets/powered.png';
 import { levels, calculateImc, Level } from './helpers/imc';
 import { GridItem } from './components/gridItem';
 import leftArrow from './assets/leftarrow.png';
+import { Modal } from './components/modals/modal';
+
 
 function App() {
   const [heightfield, setHeightField] = useState<number>(0);
   const [weightfield, setWeightField] = useState<number>(0);
   const [toShow, setToShow] = useState<Level | null>(null);
-
+  const [hidden, setHidden] = useState<boolean>(true);
+  
   const handleCalculateButton = () => {
     if(heightfield && weightfield){
       setToShow(calculateImc(heightfield, weightfield));
     }else{
-      alert('Preencha todos os campos');
+        setHidden(false);
     }
+  }
+  const handleClearOptions = () => {
+    setHeightField(0);
+    setWeightField(0);
+    setToShow(null);
   }
 
   return (
     <div className={styles.main}>
+        <Modal hidden={hidden} setHidden={setHidden}/>
         <header>
             <div className={styles.headerContainer}>
                 <img src={paweredImg} alt="" width={150}/>
@@ -55,7 +64,7 @@ function App() {
               }
               {toShow && 
                 <div className={styles.rightBig}> 
-                  <div className={styles.rightArrow} onClick={() => setToShow(null)}>
+                  <div className={styles.rightArrow} onClick={handleClearOptions}>
                       <img src={leftArrow} alt="" width={25} />
                   </div>
                   <GridItem item={toShow} />

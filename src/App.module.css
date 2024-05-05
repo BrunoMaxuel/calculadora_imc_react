@@ -6,12 +6,12 @@ body{
     padding-bottom: 50px;
 }
 .headerContainer{
-    max-width: 900px;
+    max-width: 1200px;
     margin: 40px auto;
 }
 .container{
     display: flex;
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
 }
 .container .leftSide{
@@ -115,4 +115,21 @@ body{
     .container .rightSide .grid{
         grid-template-columns: 1fr;
     }
+}
+.toolsBar{
+    display: flex;
+    gap: 10px;
+    color: #FFF;
+}
+.toolsBar div{
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #227C90;
+}
+
+.containerBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #3A485C;
 }
