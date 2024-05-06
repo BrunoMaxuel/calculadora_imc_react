@@ -2,6 +2,7 @@
   "name": "calculadora_imc",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,15 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "reload": "electron-reload . --ts --quiet && electron .",
-    "electron": "electron --entry main.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start-app": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "start": "react-scripts start", "build": "react-scripts build", "test": "react-scripts test", "eject": "react-scripts eject",
+    "electron-serve": "electron --entry main.js", "electron-start": "electron-forge start",
+    "package": "electron-forge package", "make": "electron-forge make"
   },
   "eslintConfig": {
     "extends": [

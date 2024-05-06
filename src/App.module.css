@@ -37,8 +37,11 @@ body{
     border-bottom: 2px solid rgba(150, 163, 171, 0.5);
     padding: 10px 2px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 30px;
     outline: 0px;
+}
+.container .leftSide input::placeholder{
+    font-size: 17px;
 }
 .container .leftSide button{
     background-color: #227C90;
